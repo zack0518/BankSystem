@@ -15,6 +15,12 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
+<script>
+function clickinner(target) { // Target refers to the clicked element
+    location.href='e_bank.html';
+};
+</script>
+    
 <div class="jumbotron text-center">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div>
@@ -34,7 +40,7 @@
 
   <div class="sec-title">
 
-  <h1 >  E-Banking </h1>
+  <h1 margin-left = "10px">  E-Banking </h1>
   <br>  <br>
   <h2 >Welcome to export our E-banking system!</h2>
   <br>
@@ -53,7 +59,8 @@
 				  <form>
 					<input type="text" name="user" placeholder="Username">
 					<input type="password" name="pass" placeholder="Password">
-					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                      <button type="button"  class="btn btn-primary active"  >Cancel</button>
+                      <button type="button"  class="btn btn-primary active" onClick="javascript:clickinner(this);"> Confirm</button>
 				  </form>
 
 				  <div class="login-help">
