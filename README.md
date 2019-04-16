@@ -8,5 +8,6 @@
 MySQL server version: 5.7.25
   
 数据库结构  
-user表：  ID  name password  
-transaction表 ： ID   date   FromUserID   ToUserID   money
+user表：  ID(int)  name(varChar) password(varChar) money(decimal)
+transaction表 ： ID(int)   date(datetime)   FromUserID(int, FK)   ToUserID(int, FK)   money(decimal)
+
