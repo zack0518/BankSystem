@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="js/animation.js"></script>
   <script src="js/functions.js"></script>
+  <script src="js/requsetData.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -55,12 +56,12 @@ function clickinner(target) { // Target refers to the clicked element
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	  <div class="modal-dialog">
 				<div class="loginmodal-container">
-					<h1>Login</h1><br>
+					<h1 id = "demo">Login</h1><br>
 				  <form>
-					<input type="text" name="user" placeholder="Username">
-					<input type="password" name="pass" placeholder="Password">
-                      <button type="button"  class="btn btn-primary active"  >Cancel</button>
-                      <button type="button"  class="btn btn-primary active" onClick="javascript:clickinner(this);"> Confirm</button>
+					<input id = "username" type="text" name="user" placeholder="Username">
+					<input id = "password" type="password" name="pass" placeholder="Password">
+                      <button type="button"  class="btn btn-primary active" onClick = >Cancel</button>
+                      <button type="button"  class="btn btn-primary active" onClick="loginEvent()"> Confirm</button>
 				  </form>
 
 				  <div class="login-help">
