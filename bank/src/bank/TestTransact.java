@@ -1,6 +1,7 @@
 package bank;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 
@@ -14,6 +15,7 @@ public class TestTransact {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
         server.createContext("/transact", new TransactHandler());
         server.createContext("/userinfo", new TransactHandler());
+        server.createContext("/test_handler", new LoginHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
     }
@@ -24,9 +26,7 @@ public class TestTransact {
         @Override
         public void handle(HttpExchange t) throws IOException {
         	String request = t.getRequestURI().getQuery(); // Parsing is needed
-        	
             String response = "Response: ";
-            
             t.sendResponseHeaders(200, response.getBytes().length);
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());

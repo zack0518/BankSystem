@@ -16,6 +16,5 @@ public class TestSQL {
     											// (id, username, password)
     Insert transact = new Insert("2019.4.7", "2" , "3" , "500"); //transaction table, id auto generate
     														// (id, date, formUserID, toUserID, money)
-	  
   }
 }
